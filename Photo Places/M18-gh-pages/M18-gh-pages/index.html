@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>M18</title>
+<meta charset="UTF-8">
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<link href="m18.css" rel="stylesheet">
+</head>
+<html>
+<body>
+<input type="file" id="file" accept="image/x-png, image/gif, image/jpeg"/>
+
+<h2 class="intr center">"足记" 网页版</h2>
+
+<div id="cover"><!--
+--><canvas width="0" height="0" id="canvas"></canvas><!--
+--><a target="_blank" id="download">下载图片</a><!--
+--><div id="back">返回编辑</div><!--
+--></div>
+
+<div class="center" id="select">拖动图片到这里或者点击这里选择图片 (JPG, PNG)</div>
+
+<p class="info center">
+以下中文随机字幕 API 来自
+<a href="http://hitokoto.us/" target="_blank">一言 - ヒトコト</a>，可能拿到的是日文，这时候翻译是中文，
+中文翻译 API 来自有道翻译，有道翻译每小时有次数限制，如果不能翻译就只能自己翻译 :)
+</p>
+
+<div class="center form">
+<p class="title">中文字幕<span>例如：太容易的路，可能根本不能带你去任何地方</span></p>
+<div>
+    <input type="text" id="chinese" /><!--
+ --><div id="rand">随机中文</div>
+</div>
+
+<p class="title">英文字幕<span>例如：Too easy way, may simply can't take you anywhere</span></p>
+<div>
+    <input type="text" id="english" /><!--
+ --><div id="translate">获取翻译</div>
+</div>
+</div>
+
+<div class="center">
+    <div id="enter">生成图片</div>
+</div>
+
+<div id="note"><p></p></div>
+
+<script src="m18.js"></script>
+</body>
+</html>

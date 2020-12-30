@@ -1,0 +1,30 @@
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="info.diphda.seventimer" version="1.6.8" versionCode="2092">
+  <name>SevenTimer</name>
+  <description>7Timer Mobile App</description>
+  <author href="http://diphda.info" email="wuqi198772@gmail.com">Wu Qi</author>
+  <content src="index.html"/>
+  <preference name="permissions"                value="none"/>
+  <preference name="orientation"                value="default" />
+  <preference name="target-device"              value="universal" />
+  <preference name="fullscreen"                 value="false" />
+  <preference name="webviewbounce"              value="true" />
+  <preference name="prerendered-icon"           value="true" />
+  <preference name="stay-in-webview"            value="false" />
+  <preference name="ios-statusbarstyle"         value="black-opaque" />
+  <preference name="detect-data-types"          value="true" />
+  <preference name="exit-on-suspend"            value="false" />
+  <preference name="show-splash-screen-spinner" value="true" />
+  <preference name="auto-hide-splash-screen"    value="true" />
+  <preference name="disable-cursor"             value="false" />
+  <preference name="android-minSdkVersion"      value="14" />
+  <preference name="android-installLocation"    value="auto" />
+  <plugin name="cordova-plugin-whitelist" source="npm"/>
+  <plugin name="cordova-plugin-splashscreen" spec="2.1.0" source="npm"/>
+  <plugin name="cordova-plugin-network-information" spec="1.0.1" source="npm" />
+  <plugin name="cordova-plugin-geolocation" spec="1.0.1" source="npm" />
+  <plugin name="cordova-plugin-x-socialsharing" spec="5.1.2"  source="npm" />
+  <plugin name="cordova-plugin-device-orientation" source="npm"/>
+  <icon src="icon.png"/>
+  <splash src="splash.png"/>
+  <access origin="*" />
+</widget>

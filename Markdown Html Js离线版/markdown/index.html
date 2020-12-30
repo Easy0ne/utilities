@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>哈希文档 - Markdown 协作文档工具</title>
+  <link href="../css/pure-min.css" rel="stylesheet">
+  <link href="../css/katex.min.css" rel="stylesheet">
+</head>
+
+<body id='body'>
+  <script src="../js/highlight.min.js"></script>
+  <link href="../css/vs.css" rel="stylesheet">
+  <style>
+    img[src*="#50em"] {
+      width: 50em;
+    }
+
+    img[src*="#40em"] {
+      width: 20em;
+    }
+
+    img[src*="#30em"] {
+      width: 20em;
+    }
+
+    img[src*="#20em"] {
+      width: 20em;
+    }
+
+    img[src*="#10em"] {
+      width: 10em;
+    }
+
+    blockquote {
+      padding: 10px 20px;
+      margin: 0 0 20px;
+      font-size: 17.5px;
+      border-left: 5px solid rgb(208, 208, 208);
+      background: rgb(240, 240, 240);
+    }
+
+    .emoji {
+      height: 1.2em;
+    }
+
+    .task-list {
+      padding-inline-start: 0.5em;
+    }
+
+    .task-list-item {
+      list-style-type: none;
+    }
+  </style>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <script src="../js/markdown-it.min.js"></script>
+  <script src="../js/markdown-it-plugin.js"></script>
+  <script src="../js/markdown-it-emoji.min.js"></script>
+  <script src="../js/twemoji.min.js"></script>
+
+  <script src="../js/raphael.min.js"></script>
+  <script src="../js/flowchart.min.js"></script>
+
+  <button class="pure-button" onclick="savedraft()">保存浏览器本地</button>
+  <button class="pure-button" onclick="newstart()">清空</button>
+  <button class="pure-button" onclick="savereset()">模板例子</button>
+  <button class="pure-button" onclick="preview()">预览</button>
+  <button id="savepdf" class="pure-button" onclick="savepdf()">导出PDF</button>
+  <img id='loading' src='../static/picture/loading.gif'/ style="vertical-align: middle;display: none;">
+  <img id='loadingDone' src='../static/picture/done.png'/ style="vertical-align: middle;height: 2em;display: none;">
+  <div class="pure-g" style="margin: 1em;">
+    <div id="part-left" class="pure-u-1-2" style="">
+
+      <input id="htmlContent" type="hidden" name="htmlContent">
+      <textarea id="postEditContent" name="content" class="pure-input" placeholder="Textareas work too"
+        style="width:100%;height: 100%;">
+# 哈希文档 1.0.0 内测版
+## Markdown 协作文档工具
+## 目标任务完成情况
+
+- [x] markdown基础语法
+- [x] 表格支持
+- [x] Todo 列表
+- [x] LaTex 公式
+- [x] 编程代码高亮
+- [x] 流程图
+- [x] Emoji 表情
+- [x] 图片大小控制
+- [x] **打印分页**
+- [x] **PDF导出优化**
+- [ ] 序列图
+- [ ] 团队共享文档
+- [ ] 多人实时编辑
+- [ ] Windows/Mac/Linux 客户端
+- [ ] Android/iOS 客户端
+- [ ] 离线模式
+- [ ] 多种主题
+- [ ] 自定义主题
+
+-------------------
+-------------------
+## Markdown基础语法
+
+Markdown是一种可以使普通文本编辑器编写的标记语言，通过简单的标
+记语法，它可以使普通文本内容具有⼀定的格式。
+
+## 表格支持
+
+|表头1| 表头2|
+|----|----|
+|内容1|内容2|
+|内容1| 内容2|
+
+## Todo 列表
+
+- [x] 已完成
+- [ ] 未完成
+
+## LaTex 公式
+`$$ E=mc^2 $$` 表示质能守恒公式
+
+$$ E=mc^2 $$
+
+或者在单行文字内的公式 $\sum_{i=1}^n a_i=0$
+
+## 编程代码高亮
+
+````js
+var message="Hello 哈希文档";
+console.log(message);
+````
+
+-------------------
+-------------------
+
+## 流程图
+```flow
+st=>start: 开始
+op=>operation: 登录操作
+cond=>condition: 登录成功?
+e=>end: 完成
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+[流程图 Flowchart 语法参考](https://github.com/adrai/flowchart.js)
+
+## Emoji 表情 8-)
+> 常用表情 :wink:  :cry:  :laughing: :yum: :-) :-( 8-) ;)
+
+
+## 特定符号
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+
+## 粗体、斜体、删除线
+**这是粗体**
+**This is bold text**
+*这是斜体*
+*This is italic text*
+~~删除线~~
+
+## 段落引用
+
+>可以多层嵌套
+>>使用两个大于号
+>>>或者更多大于号
+
+## 列表用法
+### 无序列表
+- 使用字符 +, -, or *
+- 子列表可以通过输出两个空格产生
+  - 这里是个子列表
+    - 又一个新的子列表
+    - 注意间隔
+    - 支持多层列表
+- 相信你很容易就可以掌握
+
+### 有序列表
+1. 就这么写就好
+2. 实际也是如此
+3. 这是第三条
+4. 也可以使用固定的序号1
+5. 实际显示会自增
+
+## 链接
+[普通链接](https://www.hashspace.cn)
+[带标题的链接](https://www.hashspace.cn "这是标题")
+也支持⽆标签的自动链接 https://www.hashspace.cn
+
+
+# 图片及大小控制
+在公共 markdown 语法中并不支持控制图片显示大小。
+这里我们约定在图片链接url尾部追加 #10em 即可按10个字符宽度显示图片，目前支持 10/20/30/40/50em宽度。
+
+
+![Stormtroopocat](stormtroopocat.jpg#10em "The Stormtroopocat") 10em
+![Stormtroopocat](stormtroopocat.jpg#30em "The Stormtroopocat") 30em
+
+-------- 
+-------- 
+
+
+## 打印分页
+Markdown 并没有公共约定的打印分页支持，在这里我们约定使用两个连续
+横向分割线表示一个分页标记。因为这个看起来也像一个分页标志。
+````markdown
+--------------------
+--------------------
+````
+生成对应的HTML代码为 :
+````html
+<div style="page-break-after: always;"></div>
+````
+
+如果你还在为 Markdown 打印分页而苦恼，那么这将是你的解药！
+这里是本页结束。
+
+
+--------------------
+--------------------
+
+## PDF导出优化
+
+- 使用 Chrome 内核渲染打印PDF，所见即所得
+- PDF 文字可复制
+- PDF 文件保持小巧，如本文档为 300KB 左右
+- PDF 无水印，无页眉页脚
+
+## 其它功能
+当前处于活跃开发状态，如果你有什么需求，可以使用付费功能支持我们的开发工作。
+然后提个工单，我们会认真考虑你的需求 :)
+
+欢迎关注微信公共号：哈希空间 
+
+        
+
+</textarea>
+    </div>
+    <div id="part-right" class="pure-u-1-2">
+      <div style="margin-left:1em;">
+        <div id="markdownShow" style="max-width: 1024px;margin:1em auto;"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../js/http.js"></script>
+  <script src="../js/by.js"></script>
+  <script src="../js/markdown-my.js"></script>
+</body>
+
+</html>

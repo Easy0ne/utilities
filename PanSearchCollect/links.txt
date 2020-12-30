@@ -1,0 +1,8 @@
+汇总 https://panfeifei.com/
+以搜索电影降临为例(%E9%99%8D%E4%B8%B4为“降临”二字的)：
+罗马盘 https://www.luomapan.com/search?keyword=%E9%99%8D%E4%B8%B4
+盘58 需转码(如降临二字转为%E9%99%8D%E4%B8%B4) https://www.pan58.com/s?wd=%E9%99%8D%E4%B8%B4
+58网盘 https://www.58wangpan.com/search/kw%E9%99%8D%E4%B8%B4
+小可搜搜 https://www.xiaokesoso.com/s/search?q=%E9%99%8D%E4%B8%B4
+小白盘 https://www.xiaobaipan.com/list-%E9%99%8D%E4%B8%B4.html
+茶杯狐 https://www.cupfox.com/search?key=%E9%99%8D%E4%B8%B4

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta property="og:title" content="Pixel Chart" />
+    <meta property="og:image" content="https://github.com/anvaka/pixchart/wiki/images/pixchart_icon.png" />
+    <meta property="og:description" content="Turn any image into a beautiful chart." />
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="Description" content="This website allows you to turn any image into a beautiful chart." />
+    <meta name="keywords" content="pixels, chart, visualization, animation, webgl, particles" />
+    <meta name="author" content="Andrei Kashcha" />
+    <title>Pixel Chart</title>
+    <style>
+.zodiac { background: #13294F}
+.bunting { background: #24354E}
+.east-bay { background: #475770}
+.carolina-blue { background: #9ABDDE}
+.hippie-blue { background: #51A2A7}
+.wood-bark { background: #312321}
+.white { background: #ffffff}
+.white-lilac { background: #E7E7E7}
+.dark-gray { background: #a8a8a8}
+.charcoal { background: #404040}
+.black20 { background: #212121}
+.black { background: #000000}
+.casablanka { background: #F2AD52}
+.pink { background: #E99E9B}
+.flamingo { background: #EC694D}
+.maroon { background: #BF3558}
+.rose-ebony { background: #664948}
+.espresso { background: #642B1C}
+.drop-help { display: none;}
+</style>
+    <link href="static/css/app.css" rel="stylesheet" />
+  </head>
+  <body class="zodiac">
+    <canvas id="scene"></canvas>
+    <div id="progress"></div>
+    <div id="app"></div>
+    <div class="drop-help">
+      <h2>Drop files here</h2>
+    </div>
+    <script>
+(function (){
+    // need to set theme here to avoid flickering of the color
+    var themeName = window.location.search.match(/\?.*theme=([^&amp;]+)/);
+    if (!themeName) return; // default theme is fine
+    // Need to consult with the whitelist, to avoid &quot;css injection&quot;
+    var knownThemes = new
+Set([&quot;zodiac&quot;,&quot;bunting&quot;,&quot;east-bay&quot;,&quot;carolina-blue&quot;,&quot;hippie-blue&quot;,&quot;wood-bark&quot;,&quot;white&quot;,&quot;white-lilac&quot;,&quot;dark-gray&quot;,&quot;charcoal&quot;,&quot;black20&quot;,&quot;black&quot;,&quot;casablanka&quot;,&quot;pink&quot;,&quot;flamingo&quot;,&quot;maroon&quot;,&quot;rose-ebony&quot;,&quot;espresso&quot;])
+    if (knownThemes.has(themeName[1])) {
+      document.body.classList.remove(&#39;zodiac&#39;);
+      document.body.classList.add(themeName[1]);
+    }
+  })();
+  (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);
+  ga(&#39;create&#39;, &#39;UA-47259320-1&#39;, &#39;anvaka.github.io&#39;);
+  ga(&#39;send&#39;, &#39;pageview&#39;);
+</script>
+    <script type="text/javascript" src="static/js/manifest.js"></script>
+    <script type="text/javascript" src="static/js/vendor.js"></script>
+    <script type="text/javascript" src="static/js/app.js"></script>
+  </body>
+</html>
